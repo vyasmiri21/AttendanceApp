@@ -1,0 +1,124 @@
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 800px;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background 0.2s;
+}
+
+.tableRow:hover {
+  background: #f7fafc;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableCell {
+  display: flex;
+  align-items: center;
+  color: #2d3748;
+}
+
+.employeeCell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.statusBadge {
+  padding: 0.375rem 0.875rem;
+  border-radius: 20px;
+  font-size: 0.8125rem;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.statusPresent {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.statusAbsent {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.statusLate {
+  background: #feebc8;
+  color: #7c2d12;
+}
+
+.statusHalfday {
+  background: #e6fffa;
+  color: #234e52;
+}
+
+@media (max-width: 768px) {
+  .table {
+    min-width: 100%;
+  }
+
+  .tableHeader,
+  .tableRow {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .tableCell:nth-child(2),
+  .tableCell:nth-child(5),
+  .tableCell:nth-child(6) {
+    display: none;
+  }
+
+  .tableHeader {
+    font-size: 0.875rem;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 0.875rem;
+  }
+
+  .employeeCell {
+    gap: 0.5rem;
+  }
+
+  .employeeCell span {
+    font-size: 0.875rem;
+  }
+}
